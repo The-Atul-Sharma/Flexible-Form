@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Select.css';
 
 export default class Select extends Component {
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        value: PropTypes.string,
+        handleInputChange: PropTypes.func.isRequired,
+        placeholder: React.PropTypes.string,
+        options: PropTypes.array.isRequired,
+    };
+
     render() {
         return (
             <div className="form-group">
