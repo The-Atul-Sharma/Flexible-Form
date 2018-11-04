@@ -1,0 +1,17 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 50%;
+}
+
+.form-group:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    line-height: 1.6rem;
+    margin-bottom: .5rem;
+}

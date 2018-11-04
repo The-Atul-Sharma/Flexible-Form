@@ -1,0 +1,20 @@
+.form-input {
+    background: #fff;
+    border: .1rem solid #c5c5c5;
+    border-radius: .3rem;
+    color: #333;
+    display: block;
+    font-size: 1.4rem;
+    height: 3.2rem;
+    max-width: 100%;
+    padding: .7rem .8rem;
+    position: relative;
+    width: 100%;
+    line-height: 1.6rem;
+    outline: 0;
+    
+}
+
+.form-input:focus {
+    border-color: #5764c6;
+}
