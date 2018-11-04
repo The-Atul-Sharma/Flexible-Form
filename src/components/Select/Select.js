@@ -8,7 +8,7 @@ export default class Select extends Component {
         label: PropTypes.string.isRequired,
         value: PropTypes.string,
         handleInputChange: PropTypes.func.isRequired,
-        placeholder: React.PropTypes.string,
+        placeholder: PropTypes.string,
         options: PropTypes.array.isRequired,
     };
 

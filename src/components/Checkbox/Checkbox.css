@@ -1,0 +1,9 @@
+.checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.checkbox-group .form-label {
+    width: 50%;
+}
