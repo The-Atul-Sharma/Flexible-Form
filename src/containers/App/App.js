@@ -3,6 +3,7 @@ import './App.css';
 import Input from '../../components/Input/Input';
 import Select from '../../components/Select/Select';
 import Checkbox from '../../components/Checkbox/Checkbox';
+import Textarea from '../../components/Textarea/Textarea';
 
 const flexiConfig = {
 	items: [
@@ -55,6 +56,14 @@ const flexiConfig = {
 				'F'
 			]
 		},
+		{
+			'name': 'usermessage',
+			'label': 'Message',
+			'type': 'textarea',
+			'placeholder': 'Enter your message',
+			'rows': 5,
+			'resize': false,
+		},
 	]
 };
 
@@ -102,6 +111,17 @@ class App extends Component {
 					handleInputChange={e => this.handleInputChange(e, item.name)}
 					options={item.values}
 					value={this.state[item.name] || []}
+				/>;
+			case 'textarea':  
+				return <Textarea 
+					inputType={item.type}
+					label={item.label}
+					name={item.name}
+					handleInputChange={e => this.handleInputChange(e, item.name)}
+					value={this.state[item.name] || ''}
+					placeholder={item.placeholder}
+					rows={item.rows}
+					resize={item.resize}
 				/>;
 		  	default:
 				return;
