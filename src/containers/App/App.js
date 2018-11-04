@@ -4,6 +4,7 @@ import Input from '../../components/Input/Input';
 import Select from '../../components/Select/Select';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import Textarea from '../../components/Textarea/Textarea';
+import Button from '../../components/Button/Button';
 
 const flexiConfig = {
 	items: [
@@ -14,16 +15,16 @@ const flexiConfig = {
 			'type': 'text',
 		},
 		{
-			'name': 'usercontact_no',
-			'label': 'Mobile No',
-			'placeholder': 'Enter your mobile no',
+			'name': 'userid',
+			'label': 'User ID',
+			'placeholder': 'Enter your id',
 			'type': 'number',
 		},
 		{
-			'name': 'usercity',
+			'name': 'userstate',
 			'label': 'State',
 			'type': 'select',
-			'placeholder': 'Choose your state',
+			'placeholder': 'Select your state',
 			'values': [
 				'Maharashtra',
 				'Kerala',
@@ -31,29 +32,31 @@ const flexiConfig = {
 			]
 		},
 		{
-			'name': 'userpackage',
-			'label': 'Choose your package?',
+			'name': 'userskills',
+			'label': 'Choose your skills?',
 			'type': 'checkbox',
 			'values': [
-				'A',
-				'B',
-				'C',
-				'D',
-				'E',
-				'F'
+				'JavaScript',
+				'HTML',
+				'CSS',
+				'ReactJS',
+				'Redux',
+				'D3.js'
 			]
 		},
 		{
-			'name': 'userradio',
-			'label': 'Choose your package?',
+			'name': 'userbloodgroup',
+			'label': 'Choose your blood group?',
 			'type': 'radio',
 			'values': [
-				'A',
-				'B',
-				'C',
-				'D',
-				'E',
-				'F'
+				'A+',
+				'A-',
+				'B+',
+				'B-',
+				'AB+',
+				'AB-',
+				'O+',
+				'O-'
 			]
 		},
 		{
@@ -152,6 +155,10 @@ class App extends Component {
 		} else { this.updateCheckboxValue(name, newSelection, newSelectionArray) }
 	}
 
+	handleButtonClick() {
+		console.log("state", this.state);
+	}
+
 	render() {
 		return (
 			<div className="container">
@@ -161,6 +168,10 @@ class App extends Component {
 					</Fragment>	
 					)	
 				}
+				<Button 
+					value="Submit"
+					handleClick={() => this.handleButtonClick()}
+				/>
 			</div>
 		);
 	}

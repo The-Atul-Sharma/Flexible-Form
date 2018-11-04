@@ -4,8 +4,8 @@ import './Select.css';
 
 export default class Select extends Component {
     static propTypes = {
-        name: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
         value: PropTypes.string,
         handleChange: PropTypes.func.isRequired,
         placeholder: PropTypes.string,

@@ -4,14 +4,14 @@ import './Input.css';
 
 export default class Input extends Component {
     static propTypes = {
-        inputType: PropTypes.oneOf(['text', 'number']).isRequired,
         label: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        handleChange: PropTypes.func.isRequired,
+        inputType: PropTypes.oneOf(['text', 'number']).isRequired,
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number,
         ]).isRequired,
+        handleChange: PropTypes.func.isRequired,
         placeholder: PropTypes.string,
     };
     

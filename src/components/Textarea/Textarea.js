@@ -5,12 +5,12 @@ import './Textarea.css';
 export default class Textarea extends Component {
     static propTypes = {
         label: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        value: PropTypes.string.isRequired,
-        rows: PropTypes.number.isRequired,
         resize: PropTypes.bool,
-        placeholder: PropTypes.string,
+        name: PropTypes.string.isRequired,
+        rows: PropTypes.number.isRequired,
+        value: PropTypes.string.isRequired,
         handleChange: PropTypes.func.isRequired,
+        placeholder: PropTypes.string,
     };
 
     render() {

@@ -1,0 +1,9 @@
+.button {
+    border: .1rem solid #5764c6;
+    border-radius: .3rem;
+    color: #5764c6;
+    display: inline-block;
+    font-size: 1.4rem;
+    height: 3.2rem;
+    padding: .7rem 1.5rem;
+}
