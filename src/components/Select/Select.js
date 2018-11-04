@@ -7,7 +7,7 @@ export default class Select extends Component {
         name: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
         value: PropTypes.string,
-        handleInputChange: PropTypes.func.isRequired,
+        handleChange: PropTypes.func.isRequired,
         placeholder: PropTypes.string,
         options: PropTypes.array.isRequired,
     };
@@ -20,7 +20,7 @@ export default class Select extends Component {
                     className="form-select"
                     name={this.props.name}
                     value={this.props.value}
-                    onChange={this.props.handleInputChange}>
+                    onChange={this.props.handleChange}>
                     <option value="">{this.props.placeholder}</option>
                     {this.props.options.map(opt => {
                         return (

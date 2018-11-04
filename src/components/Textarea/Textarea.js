@@ -10,7 +10,7 @@ export default class Textarea extends Component {
         rows: PropTypes.number.isRequired,
         resize: PropTypes.bool,
         placeholder: PropTypes.string,
-        handleInputChange: PropTypes.func.isRequired,
+        handleChange: PropTypes.func.isRequired,
     };
 
     render() {
@@ -23,7 +23,7 @@ export default class Textarea extends Component {
                     name={this.props.name}
                     rows={this.props.rows}
                     value={this.props.value}
-                    onChange={this.props.handleInputChange}
+                    onChange={this.props.handleChange}
                     placeholder={this.props.placeholder} />
             </div>
         )

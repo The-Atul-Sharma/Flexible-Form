@@ -9,7 +9,7 @@ export default class Checkbox extends Component {
         name: PropTypes.string.isRequired,
         options: PropTypes.array.isRequired,
         value: PropTypes.array,
-        handleInputChange: PropTypes.func.isRequired
+        handleChange: PropTypes.func.isRequired
     };
 
     render() {
@@ -24,7 +24,7 @@ export default class Checkbox extends Component {
                                     className="form-checkbox"
                                     type={this.props.inputType} 
                                     name={this.props.name}
-                                    onChange={this.props.handleInputChange}
+                                    onChange={this.props.handleChange}
                                     value={option}
                                     checked={this.props.value.indexOf(option) > -1}
                                 /> 

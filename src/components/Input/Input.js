@@ -7,7 +7,7 @@ export default class Input extends Component {
         inputType: PropTypes.oneOf(['text', 'number']).isRequired,
         label: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        handleInputChange: PropTypes.func.isRequired,
+        handleChange: PropTypes.func.isRequired,
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number,
@@ -24,7 +24,7 @@ export default class Input extends Component {
                 name={this.props.name}
                 type={this.props.inputType}
                 value={this.props.value}
-                onChange={this.props.handleInputChange}
+                onChange={this.props.handleChange}
                 placeholder={this.props.placeholder} />
             </div>
         )

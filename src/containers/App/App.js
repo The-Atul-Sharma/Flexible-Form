@@ -81,7 +81,7 @@ class App extends Component {
 					inputType={item.type}
 					label={item.label}
 					name={item.name}
-					handleInputChange={e => this.handleInputChange(e, item.name)}
+					handleChange={e => this.handleInputChange(e, item.name)}
 					value={this.state[item.name] || ''}
 					placeholder={item.placeholder}
 				/>;
@@ -90,7 +90,7 @@ class App extends Component {
 					name={item.name}
 					label={item.label}
 					placeholder={item.placeholder}
-					handleInputChange={e => this.handleInputChange(e, item.name)}
+					handleChange={e => this.handleInputChange(e, item.name)}
 					options={item.values}
 					value={this.state[item.name] || ''}
 				/>;
@@ -99,7 +99,7 @@ class App extends Component {
 					inputType={item.type}
 					name={item.name}
 					label={item.label}
-					handleInputChange={e => this.handleCheckboxSelection(e, item.name)}
+					handleChange={e => this.handleCheckboxSelection(e, item.name)}
 					options={item.values}
 					value={this.state[item.name] || []}
 				/>;
@@ -108,7 +108,7 @@ class App extends Component {
 					inputType={item.type}
 					name={item.name}
 					label={item.label}
-					handleInputChange={e => this.handleInputChange(e, item.name)}
+					handleChange={e => this.handleInputChange(e, item.name)}
 					options={item.values}
 					value={this.state[item.name] || []}
 				/>;
@@ -117,7 +117,7 @@ class App extends Component {
 					inputType={item.type}
 					label={item.label}
 					name={item.name}
-					handleInputChange={e => this.handleInputChange(e, item.name)}
+					handleChange={e => this.handleInputChange(e, item.name)}
 					value={this.state[item.name] || ''}
 					placeholder={item.placeholder}
 					rows={item.rows}
