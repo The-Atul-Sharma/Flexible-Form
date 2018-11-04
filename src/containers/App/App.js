@@ -32,13 +32,11 @@ const flexiConfig = {
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			inputValue: '',
-		}
+		this.state = {}
 	}
 
-	handleInputChange = e => {
-		this.setState({ inputValue: e.target.value }, () => console.log('name:', this.state.inputValue));
+	handleInputChange(e, name) {
+		this.setState({[name]: e.target.value }, () => console.log('name:', this.state));
 	}
 
 	render() {
@@ -50,8 +48,8 @@ class App extends Component {
 							inputType={item.type}
 							label={item.label}
 							name={item.name}
-							handleInputChange={this.handleInputChange}
-							value={"name"}
+							handleInputChange={e => this.handleInputChange(e, item.name)}
+							value={this.state[item.name] || ''}
 							placeholder={item.placeholder}
 						/>}	
 					</Fragment>	
