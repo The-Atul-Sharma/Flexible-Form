@@ -8,7 +8,10 @@ export default class Checkbox extends Component {
         inputType: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
         name: PropTypes.string.isRequired,
         options: PropTypes.array.isRequired,
-        value: PropTypes.array,
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.array,
+        ]),
         handleChange: PropTypes.func.isRequired
     };
 
@@ -17,10 +20,11 @@ export default class Checkbox extends Component {
             <div className="form-group">
                 <label className="form-label">{this.props.label}</label>
                 <div className="checkbox-group">
-                    {this.props.options.map(option => {
+                    {this.props.options.map((option, index) => {
                         return (
                             <label key={option} className="form-label capitalize">
                                 <input
+                                    key={index}
                                     className="form-checkbox"
                                     type={this.props.inputType} 
                                     name={this.props.name}

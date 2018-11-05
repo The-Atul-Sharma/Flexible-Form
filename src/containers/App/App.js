@@ -5,70 +5,7 @@ import Select from '../../components/Select/Select';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import Textarea from '../../components/Textarea/Textarea';
 import Button from '../../components/Button/Button';
-
-const flexiConfig = {
-	items: [
-		{
-			'name': 'username',
-			'label': 'Full Name',
-			'placeholder': 'Enter your name',
-			'type': 'text',
-		},
-		{
-			'name': 'userid',
-			'label': 'User ID',
-			'placeholder': 'Enter your id',
-			'type': 'number',
-		},
-		{
-			'name': 'userstate',
-			'label': 'State',
-			'type': 'select',
-			'placeholder': 'Select your state',
-			'values': [
-				'Maharashtra',
-				'Kerala',
-				'Tamil Nadu',
-			]
-		},
-		{
-			'name': 'userskills',
-			'label': 'Choose your skills?',
-			'type': 'checkbox',
-			'values': [
-				'JavaScript',
-				'HTML',
-				'CSS',
-				'ReactJS',
-				'Redux',
-				'D3.js'
-			]
-		},
-		{
-			'name': 'userbloodgroup',
-			'label': 'Choose your blood group?',
-			'type': 'radio',
-			'values': [
-				'A+',
-				'A-',
-				'B+',
-				'B-',
-				'AB+',
-				'AB-',
-				'O+',
-				'O-'
-			]
-		},
-		{
-			'name': 'usermessage',
-			'label': 'Message',
-			'type': 'textarea',
-			'placeholder': 'Enter your message',
-			'rows': 5,
-			'resize': false,
-		},
-	]
-};
+import flexiConfig from './store';
 
 class App extends Component {
 	constructor(props) {
@@ -132,7 +69,7 @@ class App extends Component {
 	}
 
 	handleInputChange(e, name) {
-		this.setState({[name]: e.target.value }, () => console.log('state:', this.state));
+		this.setState({[name]: e.target.value });
 	}
 
 	updateCheckboxValue(name, newSelection, newSelectionArray) {
@@ -141,7 +78,7 @@ class App extends Component {
 		} else {
 			newSelectionArray = [...this.state[name], newSelection];
 		}
-		this.setState({ [name]: newSelectionArray }, () => console.log('state', this.state));
+		this.setState({ [name]: newSelectionArray });
 	}
 
 	handleCheckboxSelection(e, name) {
@@ -156,6 +93,7 @@ class App extends Component {
 	}
 
 	handleButtonClick() {
+		alert("Check your console");
 		console.log("state", this.state);
 	}
 
@@ -163,7 +101,7 @@ class App extends Component {
 		return (
 			<div className="container">
 				{flexiConfig.items.map((item) => 
-					<Fragment>
+					<Fragment key={item.name}>
 						{this.renderComponent(item)}
 					</Fragment>	
 					)	
